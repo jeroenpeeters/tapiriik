@@ -196,7 +196,7 @@ LOGGING = {
 
 TEST_RUNNER = 'tapiriik.testing.MongoDBTestRunner'
 
-WEB_ROOT = 'http://syncsports.docker3.stackdock.com/'
+WEB_ROOT = 'http://syncsports.docker3.stackdock.com'
 
 PP_WEBSCR = "https://www.sandbox.paypal.com/cgi-bin/webscr"
 PP_BUTTON_ID = "XD6G9Z7VMRM3Q"
