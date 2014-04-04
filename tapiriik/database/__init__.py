@@ -1,6 +1,9 @@
+import os
 from pymongo import MongoClient
-from tapiriik.settings import MONGO_HOST
-_connection = MongoClient(host=MONGO_HOST)
-db = _connection["tapiriik"]
-cachedb = _connection["tapiriik_cache"]
-tzdb = _connection["tapiriik_tz"]
+
+MONGO_URL = os.environ.get('MONGO_URL')
+_connection = MongoClient(MONGO_URL)
+
+db = _connection["sportsync"]
+cachedb = _connection["sportsync_cache"]
+tzdb = _connection["sportsync_tz"]
