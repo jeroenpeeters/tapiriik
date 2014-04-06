@@ -205,6 +205,10 @@ PAYMENT_AMOUNT = 2
 PAYMENT_SYNC_DAYS = 365.25
 PAYMENT_CURRENCY = "USD"
 
+MONGO_DB_MAIN = "mongodb://localhost/sportsync"
+MONGO_DB_CACHE = "mongodb://localhost/sportsync_cache"
+MONGO_DB_TZ = "mongodb://localhost/sportsync_tz"
+
 # Hidden from regular signup
 SOFT_LAUNCH_SERVICES = []
 

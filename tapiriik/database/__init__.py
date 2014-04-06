@@ -1,9 +1,12 @@
-import os
 from pymongo import MongoClient
+from tapiriik.settings import MONGO_DB_MAIN
+from tapiriik.settings import MONGO_DB_CACHE
+from tapiriik.settings import MONGO_DB_TZ
 
-MONGO_URL = os.environ.get('MONGO_URL')
-_connection = MongoClient(MONGO_URL)
+_connSportSync = MongoClient(MONGO_DB_MAIN)
+_connCache = MongoClient(MONGO_DB_CACHE)
+_connTz = MongoClient(MONGO_DB_TZ)
 
-db = _connection["sportsync"]
-cachedb = _connection["sportsync_cache"]
-tzdb = _connection["sportsync_tz"]
+db = _connSportSync["sportsync"]
+cachedb = _connCache["sportsync_cache"]
+tzdb = _connTz["sportsync_tz"]
